@@ -1,0 +1,29 @@
+{
+  "name": "utaustin-laits/laravel-util-commands",
+  "description": "Commonly-used utility commands for Laravel",
+  "type": "library",
+  "license": "",
+  "authors": [
+    {
+       "name": "Liberal Arts ITS, University of Texas at Austin"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/console": "^10.0 || ^11.0",
+    "illuminate/support": "^10.0 || ^11.0",
+    "illuminate/database": "^10.0 || ^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Laits\\Util\\": "src"
+    }
+  },
+  "extra": {
+      "laravel": {
+          "providers": [
+              "Laits\\Util\\UtilCommandsServiceProvider"
+          ]
+      }
+  }
+}
