@@ -2,7 +2,7 @@
   "name": "utaustin-laits/laravel-util-commands",
   "description": "Commonly-used utility commands for Laravel",
   "type": "library",
-  "license": "",
+  "license": "MIT",
   "authors": [
     {
        "name": "Liberal Arts ITS, University of Texas at Austin"
