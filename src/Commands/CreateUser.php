@@ -40,7 +40,7 @@ class CreateUser extends Command
 
         if (!$password){
             $password = Str::random(12);
-            $this -> info("Generate a random password");
+            $this->info("Generated a random password.");
         }
 
         // Hash Password 
@@ -49,20 +49,20 @@ class CreateUser extends Command
         // Attempts to create the user with email, name and password 
 
         try{
-            $user = User::create(array(
+            $user = User::create([
                 'email' => $email,
                 'name' => $name,
                 'password' => $hashedPassword
-            ));
+            ]);
 
             if ($user){
                 $this->info("User created successfully for this user: " . $user->name);
             }else{
-                $this -> error('Fail to create a new user. Please check the input data and try again.');
+                $this->error('Failed to create a new user. Please check the input data and try again.');
             }
            
         } catch(\Exception $e){
-            $this -> error('Error registering new user', $e -> getMessage());
+            $this->error('Error registering new user', $e->getMessage());
         };
 
     }

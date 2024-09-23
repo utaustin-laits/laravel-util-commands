@@ -127,7 +127,7 @@ class ReportCourseRetention extends Command{
      * @return array An array of std class object in which every element has the column name specified: canvas_course_id
      */
      private function getCourseID($tableName, $columnName ){
-        $courseIDs = DB::table($tableName)->select($columnName)-> get();
+        $courseIDs = DB::table($tableName)->select($columnName)->get();
         return $courseIDs;
      }
 
